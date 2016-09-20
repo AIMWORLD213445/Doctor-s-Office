@@ -35,6 +35,7 @@ public class Doctor {
              this.getSpecialty().equals(newDoctor.getSpecialty());
     }
   }
+  
   public void save() {
     try(Connection con = DB.sql2o.open()) {
       String sql = "INSERT INTO doctors (name, specialty) VALUES (:name, :specialty)";
